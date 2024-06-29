@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="my-5 container text-center">
+    <h1 class='text-success'>Task Successfully Completed.</h1>
+    <p>Web Server Response 200 OK.</p>
+    <a href="{% url 'notes.list' %}" class="btn btn-primary">Checkout Notes</a>
+</div>
+{% endblock content %}

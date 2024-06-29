@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container d-flex flex-column justify-content-center align-items-center">
+    {% comment %} <h1 class='text-success'>Logout Successful</h1>
+    <p>Hope to see you Soon :)</p>
+    <a href="{% url "login.view" %}" class="btn btn-secondary">Login</a>
+    <a href="{% url "index.home" %}" class="btn btn-primart">Back To Home</a> {% endcomment %}
+    <form id="logoutForm" action="{% url 'logout.view' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+</div>
+{% endblock content %}
